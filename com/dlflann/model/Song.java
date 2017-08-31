@@ -20,7 +20,7 @@ public class Song
 
     public String getArtist()
     {
-        return mArtist
+        return mArtist;
     }
 
     public String getVideoUrl()
