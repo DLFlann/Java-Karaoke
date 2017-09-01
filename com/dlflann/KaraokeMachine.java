@@ -1,8 +1,11 @@
 package com.dlflann;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -141,8 +144,23 @@ public class KaraokeMachine
         }
         else
         {
-            System.out.printf("%n%n%n Open %s to hear %s by %s %n%n%n", 
-                              song.getVideoUrl(), song.getTitle(), song.getArtist());
+            try
+            {
+                if(Desktop.isDesktopSupported())
+                {
+                    Desktop.getDesktop().browse(new URI(song.getVideoUrl()));
+                }
+            }
+            catch (URISyntaxException uri)
+            {
+                System.out.println("Problem opening the specified URI");
+                uri.printStackTrace();
+            }
+            catch (IOException ioe)
+            {
+                System.out.println("Issue opening the browser instance");
+                ioe.printStackTrace();
+            }
         }
     }
 }
