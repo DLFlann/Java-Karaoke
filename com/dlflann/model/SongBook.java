@@ -108,7 +108,7 @@ public class SongBook
                     {
                         return 0;
                     }
-                    return song1.mTitle.compareTo(song2.mTitle);
+                    return song1.getTitle().compareTo(song2.getTitle());
                 }
             }
         );

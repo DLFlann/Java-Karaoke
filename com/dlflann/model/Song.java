@@ -2,9 +2,9 @@ package com.dlflann.model;
 
 public class Song
 {
-    String mArtist;
-    String mTitle;
-    String mVideoUrl;
+    private String mArtist;
+    private String mTitle;
+    private String mVideoUrl;
 
     public Song(String artist, String title, String videoUrl) 
     {
