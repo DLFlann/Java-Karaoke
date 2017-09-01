@@ -1,4 +1,2 @@
-com/dlflann/model/Song.class
-com/dlflann/model/SongBook.class
-com/dlflann/KaraokeMachine.class
-Karaoke.class
+com/dlflann/model/*.class
+*.class

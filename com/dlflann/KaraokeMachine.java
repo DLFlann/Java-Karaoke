@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.TreeMap;
 
 import com.dlflann.model.Song;
 import com.dlflann.model.SongBook;
@@ -25,10 +26,10 @@ public class KaraokeMachine
         mSongBook = songBook;
         mReader = new BufferedReader(new InputStreamReader(System.in));
         mSongQueue = new ArrayDeque<>();
-        mMenu = new HashMap<>();
+        mMenu = new TreeMap<>();
         mMenu.put("Add", "Add a new song to the menu.");
-        mMenu.put("choose", "Choose a song to sing!");
-        mMenu.put("play", "Play next song in the queue");
+        mMenu.put("Choose", "Choose a song to sing!");
+        mMenu.put("Play", "Play next song in the queue");
         mMenu.put("Quit", "Exit the program.");
     }
 
